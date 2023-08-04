@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+//daniel cambio
+
     const productsArray = [];
 
     $("#button").click(function(e){
