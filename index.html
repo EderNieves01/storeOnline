@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2da Parte de Boostrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+     crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous">
+     </script>
+        <link rel="icon" type="image/x-icon" href="#" />
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <style>
+        #div1 {
+            background-image: url("image/img-1.jpeg");
+        }
+        .men{
+            position: absolute;
+    left: 10%;
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Modal del carrito de compras -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h5 class="modal-title text-success" id="exampleModalLabel">Carrito</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">producto</th>
+                        <th scope="col">Cantidad</th>
+                      </tr>
+                    </thead>
+                    <tbody id="carrito">
+
+                    </tbody>
+                    <div id="btnDelete">
+
+                    </div>
+                </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+              <button type="button"class="btnBuy btn btn-primary">Pay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar de mi pagina -->
+<nav class="nav navbar-scroll">
+
+    <!-- div de mi logo -->
+    <div class="container-fluid">
+    <ul class="nav navbar-brand justify-content-end">
+        <div class="justify-content-left mt-2">
+        <li class="nav-item ">
+            <img class="men border-bottom" src="image/logo.jpeg" style="width: 125px;" alt="">
+        </li>
+    </div>
+
+<!-- enlaces de mi pagina -->
+<li class="nav-item">
+    <a class="nav-link active ancla text-primary mt-1" href="login.html">Log in</a>
+</li>
+        <li class="nav-item mt-1">
+            <a class="nav-link active ancla text-light" href="index.html">Home</a>
+        </li>
+        <li class="nav-item mt-1">
+            <a class="nav-link ancla text-light" href="productos.html">Productos</a>
+        </li>
+        <li class="nav-item mt-1">
+            <a class="nav-link active ancla text-primary" href="#">
+           <button class="btn-sm btn btn-light pd-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><img class="bg=dark" src="image/conversation-svgrepo-com.svg" style="width: 25px;" class="bg-light" alt="" srcset="">
+           </button> 
+        </a>
+        </li>
+    </ul>
+
+</div>
+</nav>
+
+    <!-- tarjetas con las imagenes y texto -->
+    <div class=" container mt-1">
+        <div class="row row-gap-2">
+            
+            <div id="div1" class=" col text-center justify-content-center tamano" >
+                <div class="d-flex justify-content-center mt-5 mb-5">
+                    <div id="products" class="border rounded bg-dark text-white col-md-2 opacity-50">
+                        <p class="mb-0 mt-2 pman">Man Clothes</p>
+                        <p class="mt-0">Look That</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+
+               <!-- Imagen logo e informacion-->
+                <img src="image/log2.png"
+                    class="img-fluid" width="200px" height="200px" />
+
+                <p >
+                    Here you can find the largest variety and quality of men's 
+                    clothing
+                </p>
+
+                <a name="restaurants"></a>
+                <h3 class="text-info">Find your favorite piece</h3>
+            </div>
+            
+            <!-- Clothes -->
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center"> 
+                <h3 class="text-info">Clothes</h3>
+
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3" >
+                <div class="card m-2 text-center">
+                 <div class=" card-header bd-ligth">
+                    <h3 class="text-warning">1</h3>
+                <h6 class="text-center text-dark mt-2">Baseball jackets</h6>
+                 </div>
+                 <img src="image/traje1.webp" class="tamano wrapper" />
+               
+                 <div class="card-body">
+                <h6 class="price text-center text-info text-danger">US$ 20.7</h6>
+                <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+              </div>
+            </div>
+            </div>
+
+            <!-- Mis productos -->
+            <div class="shadowdiv col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">2</h3>
+                   <h6 class="text-center text-dark mt-2">Zapatos Oxford Zapatos</h6>
+                    </div>
+                    <img src="image/zapato1.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">$US 50.5</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">3</h3>
+                   <h6 class="text-center text-dark mt-2">Biker Streetwear Intel</h6>
+                    </div>
+                    <img src="image/traje2.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">US$ 30.8</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">4</h3>
+                   <h6 class="text-center text-dark mt-2">Corvata OnliBlack</h6>
+                    </div>
+                    <img src="image/corvata1.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-danger">US$ 15.7</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">5</h3>
+                   <h6 class="text-center text-dark mt-2">Zapatos Aaron</h6>
+                    </div>
+                    <img src="image/zapato2.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">US$ 3000.0</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">6</h3>
+                   <h6 class="text-center text-dark mt-2">Corvata Zebra</h6>
+                    </div>
+                    <img src="image/corvata2.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">US$ 10.6</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">7</h3>
+                   <h6 class="text-center text-dark mt-2">Chaqueta de Cuero Zileri UE </h6>
+                    </div>
+                    <img src="image/traje3.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">US$ 40.5</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">8</h3>
+                   <h6 class="text-center text-dark mt-2">Fluchos Terry F1340</h6>
+                    </div>
+                    <img src="image/zapato3.jpeg" class="tamano wrapper"/>
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">US$ 2500.7</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">9</h3>
+                   <h6 class="text-center text-dark mt-2">Chamarra Casual</h6>
+                    </div>
+                    <img src="image/traje4.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">$US 25.6</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">10</h3>
+                   <h6 class="text-center text-dark mt-2">Corvata Blue</h6>
+                    </div>
+                    <img src="image/corvata3.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">$US 17.6</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">11</h3>
+                   <h6 class="text-center text-dark mt-2">Zapatos Tanino Crisci</h6>
+                    </div>
+                    <img src="image/zapato4.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">$US 1500.4</h6>
+                   <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card m-2 text-center">
+                    <div class="card-header bd-ligth">
+                        <h3 class="text-warning">12</h3>
+                   <h6 class="text-center text-dark mt-2">Corvata LineWhite</h6>
+                    </div>
+                    <img src="image/corvata4.jpeg" class="tamano wrapper" />
+                  
+                    <div class="card-body">
+                   <h6 class="price text-center text-info text-danger">$US 23.5</h6>
+                    <button class="buttonAdd btn-buy btn btn-success btn-sm">buy</button>
+                 </div>
+               </div>
+            </div>
+
+          
+
+    <!-- Footer con redes sociales -->
+    
+    <footer class="bg-dark text-center text-white mt-0">
+        
+        <div class="container p-2 pb-0">
+           
+            <section class="mb-3">
+               <!-- facebook -->
+                <a class="btn text-white btn-floating m-1 fac" href="https://www.facebook.com/NievesEder01/" role="button"><img src="icon/facebook.png" width="25px">
+                </a>
+
+               <!-- twitter -->
+                <a class="btn text-white btn-floating m-1 twi" href="https://twitter.com/?lang=es" role="button"><img src="icon/gorjeo.png" width="25px">
+                </a>
+
+                <!-- youtube -->
+                <a class="btn text-white btn-floating m-1 you" href="https://www.youtube.com/" role="button"><img src="icon/youtube.png" width="25px">
+                </a>
+
+                <!-- instagram -->
+                <a class="btn text-white btn-floating m-1 inst" href="https://www.instagram.com/" role="button"><img src="icon/instagram.png" width="25px">
+                </a>
+            </section>
+
+            </div>
+            <div><h4>JavaScript Eder Nieves</h4></div>
+        </footer>
+        
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="js/index.js"></script>
+</html>
