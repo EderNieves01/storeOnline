@@ -29,8 +29,6 @@ $(document).ready(function(){
         }
         productsArray.push(objProduct);
         swal("!OK!", "Add to cart" , "success")
-    }else if(idProduct === idProduct){
-            cantidad ++;
     }else{ 
             swal("!User not found!", "you need to register to buy" , "warning")
     }
