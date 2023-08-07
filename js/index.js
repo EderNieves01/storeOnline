@@ -18,7 +18,7 @@ $(document).ready(function(){
     
     $('.buttonAdd').click(function(){
 
-    if(localStorage.length > 0){
+   
         const objProduct = {
 
             idProduct: $(this).closest('.card').find('.card-header h3').text(),
@@ -29,9 +29,6 @@ $(document).ready(function(){
         }
         productsArray.push(objProduct);
         swal("!OK!", "Add to cart" , "success")
-    }else{ 
-            swal("!User not found!", "you need to register to buy" , "warning")
-    }
 
 console.log(productsArray)
 $('#carrito').empty();
@@ -69,11 +66,18 @@ function Decline() {
 }
 
 $('.btnBuy').click(function(){
-    delete productsArray;
+    if(localStorage.length > 0){
+      delete productsArray;
     $('#carrito').empty();
     console.log(productsArray); 
     $('#exampleModal').modal('hide');
     Decline();
+        // swal("!OK!", "Add to cart" , "success")
+        swal("!OK!", "your purchase has been made" , "success")
+    }else{ 
+            swal("!User not found!", "you need to register to buy" , "warning")
+    }
+    
 })
 
 });
