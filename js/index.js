@@ -18,9 +18,7 @@ $(document).ready(function(){
     
     $('.buttonAdd').click(function(){
 
-   
         const objProduct = {
-
             idProduct: $(this).closest('.card').find('.card-header h3').text(),
             NameProduct: $(this).closest('.card').find('.card-header h6').text(),
             priceProduct: $(this).closest('.card').find('.price').text(),
@@ -30,9 +28,9 @@ $(document).ready(function(){
         productsArray.push(objProduct);
         swal("!OK!", "Add to cart" , "success")
 
-console.log(productsArray)
 $('#carrito').empty();
 productsArray.forEach(Element => {
+   
     $('#carrito').append(`
            
                   <tr id="${Element.idProduct}">
