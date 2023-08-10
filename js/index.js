@@ -22,11 +22,22 @@ $(document).ready(function(){
             idProduct: $(this).closest('.card').find('.card-header h3').text(),
             NameProduct: $(this).closest('.card').find('.card-header h6').text(),
             priceProduct: $(this).closest('.card').find('.price').text(),
-            img: $(this).closest('.card').find('img').attr("src"),
-            cantidad: 1,
+            img: $(this).closest('.card').find('img').attr("src")
         }
         productsArray.push(objProduct);
         swal("!OK!", "Add to cart" , "success")
+
+        // const miValor = objProduct.idProduct;
+        // let contador = 0;
+        // $.each(productsArray, function(index, cant) {
+            
+        //     if(cant.idProduct === miValor){
+        //       contador++
+        //     }
+        //     console.log(cant.idProduct + " " + contador);
+        // })
+        
+        // productsArray.objProduct.cantidad = "eder";
 
 $('#carrito').empty();
 productsArray.forEach(Element => {
