@@ -22,7 +22,8 @@ $(document).ready(function(){
             idProduct: $(this).closest('.card').find('.card-header h3').text(),
             NameProduct: $(this).closest('.card').find('.card-header h6').text(),
             priceProduct: $(this).closest('.card').find('.price').text(),
-            img: $(this).closest('.card').find('img').attr("src")
+            img: $(this).closest('.card').find('img').attr("src"),
+            cantidad: 1
         }
         productsArray.push(objProduct);
         swal("!OK!", "Add to cart" , "success")
